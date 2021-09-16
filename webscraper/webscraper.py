@@ -32,4 +32,5 @@ def scrape():
 if __name__ == "__main__":
     # result = scrape(urls)
     # print(result)
+    scrape()
     print("success!")
