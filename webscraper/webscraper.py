@@ -6,11 +6,7 @@ import requests
 driver = webdriver.Chrome("/usr/local/bin/chromedriver")
 path = '../data/'
 urls = [
-    "https://www.visitisleofman.com/", 
-    "https://blisshotels.co.uk/", 
-    "https://www.visitgreenwich.org.uk/", 
-    "https://www.visitcaymanislands.com/en-gb",
-    "https://www.visitguernsey.com/"
+    "http://example.python-scraping.com/"
 ]
 
 
