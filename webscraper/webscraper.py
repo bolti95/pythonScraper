@@ -4,13 +4,15 @@ import pandas as pd
 import requests
 
 driver = webdriver.Chrome("/usr/local/bin/chromedriver")
-path = '../data/'
+path = 'data/'
 urls = [
     "http://example.python-scraping.com/"
 ]
 
+def result():
+    return True  
 
-def scrape():
+def scrape() -> bool:
     dict = {
         'Scraped Text': [],
         'URLs': []
@@ -26,11 +28,12 @@ def scrape():
     df = pd.DataFrame(dict)   
     df.to_csv(path+'webtext.csv', index=False, encoding='utf-8')
     if len(urls) == len(dict["URLs"]):
-            return True
+        result()
+        return 
+
+  
     
 
 if __name__ == "__main__":
-    # result = scrape(urls)
-    # print(result)
     scrape()
     print("success!")
